@@ -1,0 +1,8 @@
+- [ ] Create the controllers
+- [ ] Seed the database with events
+- [ ] Add API Keys
+- [ ] Add user permissions
+- [ ] Allow permissioned users to create events
+- [ ] Read envs from the appropriate config for the os
+- [ ] Setup deployments automatically
+- 
