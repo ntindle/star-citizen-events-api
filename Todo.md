@@ -5,4 +5,3 @@
 - [ ] Allow permissioned users to create events
 - [ ] Read envs from the appropriate config for the os
 - [ ] Setup deployments automatically
-- 
