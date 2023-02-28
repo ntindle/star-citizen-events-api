@@ -4,6 +4,8 @@ using SCEAPI.Repository;
 using SCEAPI.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using kDg.FileBaseContext;
+using kDg.FileBaseContext.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,15 +19,7 @@ builder.Host.UseSerilog();
 
 
 // Configure DB
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddSerilog()));
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), options =>
-    {
-        options.EnableRetryOnFailure();
-        options.UseDateOnlyTimeOnly();
-    }).EnableDetailedErrors();
-});
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseFileBaseContextDatabase("Events", Directory.GetCurrentDirectory()), ServiceLifetime.Singleton);
 
 // Configure Repositories
 builder.Services.AddScoped<IEventRepository, EventRepository>();

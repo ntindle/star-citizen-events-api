@@ -11,7 +11,6 @@ namespace SCEAPI
             CreateMap<Event, EventDTO>().ReverseMap();
 
             CreateMap<Event, EventCreateDTO>().ReverseMap();
-            CreateMap<Event, EventUpdateDTO>().ReverseMap();
         }
     }
 }

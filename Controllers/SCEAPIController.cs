@@ -35,5 +35,41 @@ namespace SCEAPI.Controllers
             }
             return Ok(objDto);
         }
+
+        [HttpGet("{eventId:int}", Name = "GetEvent")]
+        public async Task<IActionResult> GetEvent(int eventId)
+        {
+            var obj = await _eventRepo.GetAsync(v => v.Id == eventId);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            var objDto = _mapper.Map<EventDTO>(obj);
+            return Ok(objDto);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(EventDTO))]
+        public async Task<IActionResult> CreateEvent([FromBody] EventCreateDTO eventDTO)
+        {
+            if (eventDTO == null)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // if(await _eventRepo.GetAsync(v=> v.Name.ToLower()==eventDTO.Name.ToLower()) != null)
+            // {
+            //     ModelState.AddModelError("Name", "Event already exists. Try adding the year instead");
+            //     return ValidationProblem(ModelState);
+            // }
+
+            var eventObj = _mapper.Map<Event>(eventDTO);
+
+            eventObj.Id =  (await _eventRepo.GetAllAsync(tracked: false, orderBy: v => v.OrderBy(v => v.Id))).LastOrDefault(defaultValue: new Event(){Id = 0}).Id + 1;
+
+            await _eventRepo.CreateAsync(eventObj);
+
+            return Created($"/api/events/{eventObj.Id}", eventObj);
+        }
     }
 }
