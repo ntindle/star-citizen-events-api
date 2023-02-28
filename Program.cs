@@ -19,7 +19,7 @@ builder.Host.UseSerilog();
 
 
 // Configure DB
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseFileBaseContextDatabase("Events", Directory.GetCurrentDirectory()), ServiceLifetime.Singleton);
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseFileBaseContextDatabase("events", Directory.GetCurrentDirectory()), ServiceLifetime.Singleton);
 
 // Configure Repositories
 builder.Services.AddScoped<IEventRepository, EventRepository>();
