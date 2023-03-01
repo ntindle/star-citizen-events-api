@@ -49,11 +49,11 @@ namespace SCEAPI.Models.DTOs
             {
                 if (IngameStartDateTime.Year == IngameEndDateTime.Year)
                 {
-                    return $"{Name} ({IngameStartDateTime.Year})";
+                    return $"{Name} {IngameStartDateTime.Year}";
                 }
                 else
                 {
-                    return $"{Name} ({IngameStartDateTime.Year}-{IngameEndDateTime.Year})";
+                    return $"{Name} {IngameStartDateTime.Year}-{IngameEndDateTime.Year}";
                 }
             }
         }
