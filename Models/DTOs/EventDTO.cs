@@ -31,7 +31,7 @@ namespace SCEAPI.Models.DTOs
         {
             get
             {
-                return StartDateTime.AddYears(930);
+                return Event.GenerateIngameDateTime(StartDateTime);
             }
         }
 
@@ -39,7 +39,7 @@ namespace SCEAPI.Models.DTOs
         {
             get
             {
-                return EndDateTime.AddYears(930);
+                return Event.GenerateIngameDateTime(EndDateTime);
             }
         }
 

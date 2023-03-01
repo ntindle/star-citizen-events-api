@@ -6,7 +6,6 @@ namespace SCEAPI.Models
     public class Event
     {
         [Key]
-        // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; } = "";
 
@@ -27,7 +26,7 @@ namespace SCEAPI.Models
         {
             get
             {
-                return StartDateTime.AddYears(930);
+                return GenerateIngameDateTime(StartDateTime);
             }
         }
 
@@ -35,7 +34,7 @@ namespace SCEAPI.Models
         {
             get
             {
-                return EndDateTime.AddYears(930);
+                return GenerateIngameDateTime(EndDateTime);
             }
         }
 
@@ -43,19 +42,24 @@ namespace SCEAPI.Models
         {
             get
             {
-                return GenerateDisplayName(Name, IngameStartDateTime, IngameEndDateTime);
+                return GenerateDisplayName(Name, StartDateTime, EndDateTime);
             }
+        }
+
+        public static DateTime GenerateIngameDateTime(DateTime dateTime)
+        {
+            return dateTime.AddYears(930);
         }
 
         public static string GenerateDisplayName(string name, DateTime startDateTime, DateTime endDateTime)
         {
             if (startDateTime.Year == endDateTime.Year)
             {
-                return $"{name} {startDateTime.Year}";
+                return $"{name} {GenerateIngameDateTime(startDateTime).Year}";
             }
             else
             {
-                return $"{name} {startDateTime.Year}-{endDateTime.Year}";
+                return $"{name} {GenerateIngameDateTime(startDateTime).Year}-{GenerateIngameDateTime(endDateTime).Year}";
             }
         }
 
