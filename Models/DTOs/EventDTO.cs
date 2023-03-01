@@ -43,5 +43,20 @@ namespace SCEAPI.Models.DTOs
             }
         }
 
+        public string DisplayName
+        {
+            get
+            {
+                if (IngameStartDateTime.Year == IngameEndDateTime.Year)
+                {
+                    return $"{Name} ({IngameStartDateTime.Year})";
+                }
+                else
+                {
+                    return $"{Name} ({IngameStartDateTime.Year}-{IngameEndDateTime.Year})";
+                }
+            }
+        }
+
     }
 }

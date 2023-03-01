@@ -37,5 +37,11 @@ namespace SCEAPI.Models
             }
         }
 
+        public string DisplayName{
+            get{
+                return $"{Name} ({IngameStartDateTime.Year}-{IngameEndDateTime.Year})";
+            }
+        }
+
     }
 }
