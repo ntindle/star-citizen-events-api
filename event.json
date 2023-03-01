@@ -6,5 +6,13 @@
     "EndDateTime": "02/06/2023 00:00:00",
     "Name": "Red Festival",
     "StartDateTime": "01/20/2023 00:00:00"
+  },
+  {
+    "Id": "2",
+    "AlternativeName": "Valentine\u2019s Day",
+    "Description": "Just like Valentine\u2019s Day, during Coramor, citizens show loved ones they care by giving gifts, sending cards, and remembering the story of long-lost lovers separated by trillions of miles following a collapsed deep-space jump point\u2026 so maybe not just like our Valentine\u2019s Day.",
+    "EndDateTime": "02/15/2023 00:00:00",
+    "Name": "Coramor",
+    "StartDateTime": "02/11/2023 00:00:00"
   }
 ]
