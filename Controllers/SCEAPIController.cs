@@ -57,11 +57,14 @@ namespace SCEAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            // if(await _eventRepo.GetAsync(v=> v.Name.ToLower()==eventDTO.Name.ToLower()) != null)
-            // {
-            //     ModelState.AddModelError("Name", "Event already exists. Try adding the year instead");
-            //     return ValidationProblem(ModelState);
-            // }
+            var displayName = Event.GenerateDisplayName(eventDTO.Name, eventDTO.StartDateTime, eventDTO.EndDateTime);
+
+            if (await _eventRepo.GetByDisplayNameAsync(displayName: displayName) != null)
+            {
+                ModelState.AddModelError("Name", $"Event: {displayName} already exists. Try updating the year, or event name.");
+                return ValidationProblem(ModelState);
+            }
+
 
             var eventObj = _mapper.Map<Event>(eventDTO);
 

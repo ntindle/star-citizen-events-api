@@ -7,7 +7,7 @@ namespace SCEAPI.Models.DTOs
         [Key]
         public int Id { get; set; }
         [Required]
-        public string? Name { get; set; }
+        public string Name { get; set; } = "";
 
         public string? AlternativeName { get; set; }
         [Required]
@@ -47,14 +47,7 @@ namespace SCEAPI.Models.DTOs
         {
             get
             {
-                if (IngameStartDateTime.Year == IngameEndDateTime.Year)
-                {
-                    return $"{Name} {IngameStartDateTime.Year}";
-                }
-                else
-                {
-                    return $"{Name} {IngameStartDateTime.Year}-{IngameEndDateTime.Year}";
-                }
+                return Event.GenerateDisplayName(Name, StartDateTime, EndDateTime);
             }
         }
 

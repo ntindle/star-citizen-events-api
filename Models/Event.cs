@@ -43,14 +43,19 @@ namespace SCEAPI.Models
         {
             get
             {
-                if (IngameStartDateTime.Year == IngameEndDateTime.Year)
-                {
-                    return $"{Name} {IngameStartDateTime.Year}";
-                }
-                else
-                {
-                    return $"{Name} {IngameStartDateTime.Year}-{IngameEndDateTime.Year}";
-                }
+                return GenerateDisplayName(Name, IngameStartDateTime, IngameEndDateTime);
+            }
+        }
+
+        public static string GenerateDisplayName(string name, DateTime startDateTime, DateTime endDateTime)
+        {
+            if (startDateTime.Year == endDateTime.Year)
+            {
+                return $"{name} {startDateTime.Year}";
+            }
+            else
+            {
+                return $"{name} {startDateTime.Year}-{endDateTime.Year}";
             }
         }
 
