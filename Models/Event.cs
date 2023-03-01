@@ -23,5 +23,19 @@ namespace SCEAPI.Models
             get; set;
         }
 
+        public DateTime IngameStartDateTime
+        {
+            get{
+                return StartDateTime.AddYears(930);
+            }
+        }
+
+        public DateTime IngameEndDateTime
+        {
+            get{
+                return EndDateTime.AddYears(930);
+            }
+        }
+
     }
 }

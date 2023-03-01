@@ -13,13 +13,34 @@ namespace SCEAPI.Models.DTOs
         [Required]
         public string? Description { get; set; }
         [Required]
-        
+
+
         public DateTime StartDateTime
         {
-            get; set; }
+            get; set;
+        }
+
+        [Required]
         public DateTime EndDateTime
         {
             get; set;
+        }
+
+
+        public DateTime IngameStartDateTime
+        {
+            get
+            {
+                return StartDateTime.AddYears(930);
+            }
+        }
+
+        public DateTime IngameEndDateTime
+        {
+            get
+            {
+                return EndDateTime.AddYears(930);
+            }
         }
 
     }
