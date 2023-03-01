@@ -20,6 +20,6 @@ namespace SCEAPI.Repository
             await _db.SaveChangesAsync();
             return entity;
         }
-        
+
     }
 }

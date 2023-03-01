@@ -7,14 +7,15 @@ namespace SCEAPI.Models.DTOs
         [Required]
         public string Name { get; set; } = "";
 
-        public string AlternativeName { get; set; } ="";
+        public string AlternativeName { get; set; } = "";
         [Required]
         public string? Description { get; set; } = "";
         [Required]
-        
+
         public DateTime StartDateTime
         {
-            get; set; }
+            get; set;
+        }
         public DateTime EndDateTime
         {
             get; set;

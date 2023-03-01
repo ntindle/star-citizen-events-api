@@ -65,7 +65,7 @@ namespace SCEAPI.Controllers
 
             var eventObj = _mapper.Map<Event>(eventDTO);
 
-            eventObj.Id =  (await _eventRepo.GetAllAsync(tracked: false, orderBy: v => v.OrderBy(v => v.Id))).LastOrDefault(defaultValue: new Event(){Id = 0}).Id + 1;
+            eventObj.Id = (await _eventRepo.GetAllAsync(tracked: false, orderBy: v => v.OrderBy(v => v.Id))).LastOrDefault(defaultValue: new Event() { Id = 0 }).Id + 1;
 
             await _eventRepo.CreateAsync(eventObj);
 

@@ -8,7 +8,7 @@ namespace SCEAPI.Models
         [Key]
         // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; }="";
+        public string Name { get; set; } = "";
 
         public string? AlternativeName { get; set; }
         public string? Description { get; set; }
@@ -25,20 +25,24 @@ namespace SCEAPI.Models
 
         public DateTime IngameStartDateTime
         {
-            get{
+            get
+            {
                 return StartDateTime.AddYears(930);
             }
         }
 
         public DateTime IngameEndDateTime
         {
-            get{
+            get
+            {
                 return EndDateTime.AddYears(930);
             }
         }
 
-        public string DisplayName{
-            get{
+        public string DisplayName
+        {
+            get
+            {
                 return $"{Name} ({IngameStartDateTime.Year}-{IngameEndDateTime.Year})";
             }
         }
