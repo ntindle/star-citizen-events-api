@@ -22,30 +22,32 @@ namespace SCEAPI.Repository
 
         public async Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null)
         {
-             IQueryable<T> query =  dbSet;
+            IQueryable<T> query = dbSet;
             if (filter != null)
                 query = query.Where(filter);
             if (orderBy != null)
                 query = orderBy(query);
-            if(!tracked)
+            if (!tracked)
                 query = query.AsNoTracking();
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null)
         {
-            IQueryable<T> query =  dbSet;
+            IQueryable<T> query = dbSet;
             if (filter != null)
                 query = query.Where(filter);
             if (orderBy != null)
                 query = orderBy(query);
+            if (!tracked)
+                query = query.AsNoTracking();
 
             return await query.ToListAsync();
         }
 
         public async Task RemoveAsync(T entity)
         {
-            dbSet.Remove(entity); 
+            dbSet.Remove(entity);
             await SaveAsync();
         }
 

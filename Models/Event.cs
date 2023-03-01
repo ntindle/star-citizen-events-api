@@ -6,31 +6,60 @@ namespace SCEAPI.Models
     public class Event
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; } = "";
 
         public string? AlternativeName { get; set; }
         public string? Description { get; set; }
 
-        public DateOnly StartDate { get; set; }
-        public DateOnly EndDate { get; set; }
-
-        public TimeOnly? StartTime { get; set; }
-        public TimeOnly? EndTime { get; set; }
 
         public DateTime StartDateTime
         {
-            get
-            {
-                return new DateTime(StartDate.Year, StartDate.Month, StartDate.Day, StartTime?.Hour ?? 0, StartTime?.Minute ?? 0, StartTime?.Second ?? 0);
-            }
+            get; set;
         }
         public DateTime EndDateTime
         {
+            get; set;
+        }
+
+        public DateTime IngameStartDateTime
+        {
             get
             {
-                return new DateTime(EndDate.Year, EndDate.Month, EndDate.Day, EndTime?.Hour ?? 0, EndTime?.Minute ?? 0, EndTime?.Second ?? 0);
+                return GenerateIngameDateTime(StartDateTime);
+            }
+        }
+
+        public DateTime IngameEndDateTime
+        {
+            get
+            {
+                return GenerateIngameDateTime(EndDateTime);
+            }
+        }
+
+        public string DisplayName
+        {
+            get
+            {
+                return GenerateDisplayName(Name, StartDateTime, EndDateTime);
+            }
+        }
+
+        public static DateTime GenerateIngameDateTime(DateTime dateTime)
+        {
+            return dateTime.AddYears(930);
+        }
+
+        public static string GenerateDisplayName(string name, DateTime startDateTime, DateTime endDateTime)
+        {
+            if (startDateTime.Year == endDateTime.Year)
+            {
+                return $"{name} {GenerateIngameDateTime(startDateTime).Year}";
+            }
+            else
+            {
+                return $"{name} {GenerateIngameDateTime(startDateTime).Year}-{GenerateIngameDateTime(endDateTime).Year}";
             }
         }
 

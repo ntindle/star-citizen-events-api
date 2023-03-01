@@ -25,6 +25,7 @@ namespace SCEAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<EventDTO>))]
         public async Task<IActionResult> GetEvents()
         {
             var objList = await _eventRepo.GetAllAsync();
@@ -34,6 +35,74 @@ namespace SCEAPI.Controllers
                 objDto.Add(_mapper.Map<EventDTO>(obj));
             }
             return Ok(objDto);
+        }
+
+        [HttpGet("{eventId:int}", Name = "GetEvent")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EventDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetEvent(int eventId)
+        {
+            var obj = await _eventRepo.GetAsync(v => v.Id == eventId);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            var objDto = _mapper.Map<EventDTO>(obj);
+            return Ok(objDto);
+        }
+
+        [HttpGet("{displayName}", Name = "GetEventByDisplayName")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EventDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetEventByDisplayName(string displayName)
+        {
+            var obj = await _eventRepo.GetByDisplayNameAsync(displayName: displayName);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            var objDto = _mapper.Map<EventDTO>(obj);
+            return Ok(objDto);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(EventDTO))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> CreateEvent([FromBody] EventCreateDTO eventDTO)
+        {
+            if (eventDTO == null)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var displayName = Event.GenerateDisplayName(eventDTO.Name, eventDTO.StartDateTime, eventDTO.EndDateTime);
+
+            if (await _eventRepo.GetByDisplayNameAsync(displayName: displayName) != null)
+            {
+                ModelState.AddModelError("Name", $"Event: {displayName} already exists. Try updating the year, or event name.");
+                return ValidationProblem(ModelState);
+            }
+
+
+            var eventObj = _mapper.Map<Event>(eventDTO);
+
+            eventObj.Id = (await _eventRepo.GetAllAsync(tracked: false, orderBy: v => v.OrderBy(v => v.Id))).LastOrDefault(defaultValue: new Event() { Id = 0 }).Id + 1;
+
+            await _eventRepo.CreateAsync(eventObj);
+
+            return Created($"/api/events/{eventObj.Id}", eventObj);
+        }
+    }
+
+    [Route("api/health")]
+    [ApiController]
+    public class HealthController : ControllerBase
+    {
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult Get()
+        {
+            return Ok();
         }
     }
 }

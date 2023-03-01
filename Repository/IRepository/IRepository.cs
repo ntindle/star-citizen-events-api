@@ -11,10 +11,10 @@ namespace SCEAPI.Repository.IRepository
 
         Task RemoveAsync(T entity);
 
-        Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null,
+        Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null);
 
-        Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked=true,
+        Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null);
     }
 }
