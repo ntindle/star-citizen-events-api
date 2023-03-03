@@ -17,11 +17,14 @@ namespace SCEAPI.Controllers
         public readonly IMapper _mapper;
         public readonly ILogger<SCEAPIController> _logger;
 
-        public SCEAPIController(IEventRepository eventRepo, IMapper mapper, ILogger<SCEAPIController> logger)
+        public readonly IConfiguration _config;
+
+        public SCEAPIController(IEventRepository eventRepo, IMapper mapper, ILogger<SCEAPIController> logger, IConfiguration config)
         {
             _eventRepo = eventRepo;
             _mapper = mapper;
             _logger = logger;
+            _config = config;
         }
 
         [HttpGet]
@@ -68,8 +71,14 @@ namespace SCEAPI.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(EventDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> CreateEvent([FromBody] EventCreateDTO eventDTO)
         {
+            if (_config.GetValue<bool>("ReadOnly"))
+            {
+                _logger.LogCritical("Attempted to write readonly api");
+                return NotFound("The API is in read-only mode. No changes can be made.");
+            }
             if (eventDTO == null)
             {
                 return BadRequest(ModelState);
