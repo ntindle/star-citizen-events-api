@@ -32,7 +32,24 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Star Citizen Events API",
+        Description = "An API that returns a historical list of Star Citizen Events",
+        // TermsOfService = new Uri(""),
+        Contact = new Microsoft.OpenApi.Models.OpenApiContact
+        {
+            Name = "Github",
+            Url = new Uri("https://github.com/ntindle/sceapi")
+        }
+    });
+    options.EnableAnnotations();
+
+}
+);
 
 var app = builder.Build();
 
