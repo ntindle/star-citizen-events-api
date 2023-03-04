@@ -55,14 +55,14 @@ If you would like to add an event, please add it to the `events.json` file, then
     "Id": "1",
     "AlternativeName": "Lunar New Year",
     "Description": "Launch into the Lunar New Year with a bold new adventure from January 20 through February 6.\n\nTo ring in a prosperous Year of the Rabbit here on Earth in 2023, and Year of the Rooster in 2953 Stanton, we\u0027re inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, red envelopes have been hidden across Stanton, and we\u0027re offering a variety of red and gold ship paints to tempt good fortune in the year ahead.",
-    "EndDateTime": "02/06/2023 00:00:00",
     "Name": "Red Festival",
-    "StartDateTime": "01/20/2023 00:00:00"
+    "StartDateTime": "01/20/2023 00:00:00",
+    "EndDateTime": "02/06/2023 00:00:00"
   }
 ```
 
 ### Adding an event via api
-You can also run the API locally and add an event via the `/api/v1/events` endpoint with a POST request. Then open a pull request with the changes to the `events.json` file. The format of the `/api/v1/events` POST endpoint is as follows:
+You can also run the API locally and add an event via the `/api/v1/ingame/events` endpoint with a POST request. Then open a pull request with the changes to the `events.json` file. The format of the `/api/v1/ingame/events` POST endpoint is as follows:
 
 ```json
 {
@@ -73,6 +73,14 @@ You can also run the API locally and add an event via the `/api/v1/events` endpo
   "endDateTime": "2023-03-03T16:26:08.473Z"
 }
 ```
+
+### Updating an event via json file
+> **Please only update one event per PR.** 
+
+If you would like to update an event, please update it in the `events.json` file, then make a pull request. 
+
+If you would like to update multiple events, please submit multiple PRs.
+
 
 ## Building
 To build the project, you will need to have the [.NET Core SDK](https://dotnet.microsoft.com/download) installed. Then, you can run the following command:

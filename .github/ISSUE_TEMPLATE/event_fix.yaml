@@ -1,0 +1,200 @@
+name: Event Fix Request
+description: Add an Event to the API
+title: "[Event Fix]: "
+labels: ["new", "events"]
+assignees:
+  - ntindle
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this event fix form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: event-id
+    attributes:
+      label: What's the Id of the event?
+      description: What's the id of the event returned from API?
+      placeholder: Tell us what you see!
+      value: "1"
+    validations:
+      required: true
+  - type: input
+    id: event-name
+    attributes:
+      label: What's the name of the event?
+      description: What's the In-Game name of the event?
+      placeholder: Tell us what you see!
+      value: "Coramor!"
+    validations:
+      required: false
+  - type: input
+    id: event-alt-name
+    attributes:
+      label: What's the alternate name of the event?
+      description: What's the Out-of-Game event this corresponds to, if one exists?
+      placeholder: Tell us what you see!
+      value: "Valentine's Day!"
+    validations:
+      required: false
+  - type: dropdown
+    id: month-start
+    attributes:
+      label: What month does the event start in?
+      options:
+        - January
+        - February
+        - March
+        - April
+        - May
+        - June
+        - July
+        - August
+        - September
+        - October
+        - November
+        - December
+    validations:
+      required: false
+  - type: dropdown
+    id: day-start
+    attributes:
+      label: What day of the month does the event start on?
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+        - 23
+        - 24
+        - 25
+        - 26
+        - 27
+        - 28
+        - 29
+        - 30
+        - 31
+    validations:
+      required: false
+  - type: dropdown
+    id: year-start
+    attributes:
+      label: What year did the event start in?
+      options:
+        - 2023
+        - 2022
+        - 2021
+        - 2020
+        - 2019
+        - 2018
+        - 2017
+        - 2016
+        - 2015
+        - 2014
+        - 2013
+        - 2012
+    validations:
+      required: false
+  - type: dropdown
+    id: month-end
+    attributes:
+      label: What month does the event end in?
+      options:
+        - January
+        - February
+        - March
+        - April
+        - May
+        - June
+        - July
+        - August
+        - September
+        - October
+        - November
+        - December
+    validations:
+      required: false
+  - type: dropdown
+    id: day-end
+    attributes:
+      label: What day of the month does the event end on?
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+        - 23
+        - 24
+        - 25
+        - 26
+        - 27
+        - 28
+        - 29
+        - 30
+        - 31
+    validations:
+      required: false
+  - type: dropdown
+    id: year-end
+    attributes:
+      label: What year did the event end in?
+      options:
+        - 2023
+        - 2022
+        - 2021
+        - 2020
+        - 2019
+        - 2018
+        - 2017
+        - 2016
+        - 2015
+        - 2014
+        - 2013
+        - 2012
+    validations:
+      required: false
+
+
