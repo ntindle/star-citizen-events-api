@@ -62,7 +62,7 @@ If you would like to add an event, please add it to the `events.json` file, then
 ```
 
 ### Adding an event via api
-You can also run the API locally and add an event via the `/api/events` endpoint with a POST request. Then open a pull request with the changes to the `events.json` file. The format of the `/api/events` POST endpoint is as follows:
+You can also run the API locally and add an event via the `/api/v1/events` endpoint with a POST request. Then open a pull request with the changes to the `events.json` file. The format of the `/api/v1/events` POST endpoint is as follows:
 
 ```json
 {

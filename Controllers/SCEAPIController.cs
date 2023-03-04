@@ -10,10 +10,10 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace SCEAPI.Controllers
 {
 
-    [Route("api/events")]
+    [Route("api/v1/ingame/events")]
     [ApiController]
     [Produces("application/json")]
-
+    [SwaggerTag("Ingame Events")]
     public class SCEAPIController : ControllerBase
     {
         public readonly IEventRepository _eventRepo;
@@ -118,11 +118,11 @@ namespace SCEAPI.Controllers
 
             await _eventRepo.CreateAsync(eventObj);
 
-            return Created($"/api/events/{eventObj.Id}", eventObj);
+            return CreatedAtAction(nameof(GetEvent), new { eventId = eventObj.Id }, eventObj);
         }
     }
 
-    [Route("api/health")]
+    [Route("api/v1/health")]
     [ApiController]
     public class HealthController : ControllerBase
     {
