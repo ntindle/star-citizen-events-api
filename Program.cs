@@ -39,12 +39,17 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Title = "Star Citizen Events API",
         Description = "An API that returns a historical list of Star Citizen Events",
-        // TermsOfService = new Uri(""),
         Contact = new Microsoft.OpenApi.Models.OpenApiContact
         {
-            Name = "Github",
+            Name = "Contact via GitHub",
             Url = new Uri("https://github.com/ntindle/star-citizen-events-api")
+        },
+        License = new Microsoft.OpenApi.Models.OpenApiLicense
+        {
+            Name = "CHECK GITHUB FOR LICENSE",
+            Url = new Uri("https://github.com/ntindle/star-citizen-events-api/")
         }
+
     });
     options.EnableAnnotations();
 
