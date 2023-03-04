@@ -43,7 +43,7 @@ builder.Services.AddSwaggerGen(options =>
         Contact = new Microsoft.OpenApi.Models.OpenApiContact
         {
             Name = "Github",
-            Url = new Uri("https://github.com/ntindle/sceapi")
+            Url = new Uri("https://github.com/ntindle/star-citizen-events-api")
         }
     });
     options.EnableAnnotations();
