@@ -124,6 +124,7 @@ namespace SCEAPI.Controllers
 
     [Route("api/v1/health")]
     [ApiController]
+    [SwaggerTag("Health Status of the API")]
     public class HealthController : ControllerBase
     {
         [SwaggerOperation("Returns 200 if the API is up.", Description = "If this does not return 200 OK, the API should be considered down.")]
