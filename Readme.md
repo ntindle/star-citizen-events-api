@@ -47,6 +47,9 @@ Notes:
 ## Contributing
 If you would like to contribute to this project, please feel free to submit a pull request. 
 
+## Adding an event via Issue
+[Click here to create a new issue](https://github.com/ntindle/star-citizen-events-api/issues/new?assignees=ntindle&labels=new%2Cevents&template=event_request.yaml&title=%5BNew+Event%5D%3A+)
+
 ### Adding an event via json file
 If you would like to add an event, please add it to the `events.json` file, then make a pull request. The format is as follows:
 

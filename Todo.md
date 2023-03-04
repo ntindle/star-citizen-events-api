@@ -1,5 +1,5 @@
 - [x] Create the controllers
 - [x] Seed the database with events
-- [ ] Add API Keys
 - [x] Read envs from the appropriate config for the os
-- [ ] Setup deployments automatically
+- [x] Setup deployments automatically
+- [ ] Add API Keys
