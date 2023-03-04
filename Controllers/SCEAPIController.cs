@@ -35,7 +35,7 @@ namespace SCEAPI.Controllers
             Description = "Gets the list of all Events that are stored in events.json."
         )]
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<EventDTO>))]
+        [SwaggerResponse(StatusCodes.Status200OK, "Returns the Events.", Type = typeof(List<EventDTO>))]
         public async Task<IActionResult> GetEvents()
         {
             var objList = await _eventRepo.GetAllAsync();
@@ -52,8 +52,8 @@ namespace SCEAPI.Controllers
             Description = "Gets a specific Event by its Id."
         )]
         [HttpGet("{eventId:int}", Name = "GetEvent")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EventDTO))]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [SwaggerResponse(StatusCodes.Status200OK, "The found Event.", Type = typeof(EventDTO))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "The Event was not found.")]
         public async Task<IActionResult> GetEvent([SwaggerParameter("The event ID to look up")] int eventId)
         {
             var obj = await _eventRepo.GetAsync(v => v.Id == eventId);
@@ -67,11 +67,11 @@ namespace SCEAPI.Controllers
 
         [SwaggerOperation(
             Summary = "Gets an Event by display name.",
-            Description = "Gets a specific Event by its Display Name. \n\nNote: This may stop working as expected the API is updated as the display name calculator is expected to change as more events are added."
+            Description = "Gets a specific Event by its Display Name. Will return the first matching event found. \n\nNote: This may stop working as expected the API is updated as the display name calculator is expected to change as more events are added."
         )]
         [HttpGet("{displayName}", Name = "GetEventByDisplayName")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EventDTO))]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [SwaggerResponse(StatusCodes.Status200OK, "The found Event.", Type = typeof(EventDTO))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "The Event was not found.")]
         public async Task<IActionResult> GetEventByDisplayName([SwaggerParameter("Display Name of the Event")] string displayName)
         {
             var obj = await _eventRepo.GetByDisplayNameAsync(displayName: displayName);
@@ -88,9 +88,9 @@ namespace SCEAPI.Controllers
             Description = "Creates a new event, only if the API is in local development. \n\nWill check that no duplicate display names will occur. If you have a display name conflict, the display name generator may need updated"
         )]
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(EventDTO))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [SwaggerResponse(StatusCodes.Status201Created, "The Event was created.", Type = typeof(EventDTO))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "The Request was not good.")]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "The endpoint was called when in read only mode.")]
         public async Task<IActionResult> CreateEvent([FromBody, SwaggerRequestBody("The Create Event Payload", Required = true)] EventCreateDTO eventDTO)
         {
             if (_config.GetValue<bool>("ReadOnly"))
@@ -128,7 +128,7 @@ namespace SCEAPI.Controllers
     {
         [SwaggerOperation("Returns 200 if the API is up.", Description = "If this does not return 200 OK, the API should be considered down.")]
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [SwaggerResponse(StatusCodes.Status200OK, "The API is up.")]
         public IActionResult Get()
         {
             return Ok();
