@@ -85,7 +85,7 @@ namespace SCEAPI.Controllers
 
         [SwaggerOperation(
             Summary = "Creates a new Event.",
-            Description = "Creates a new event, only if the API is in local development. \n\nWill check that no duplicate display names will occur. If you have a display name conflict, the display name generator may need updated"
+            Description = "Creates a new event, only if the API is in local development. \n\nWill check that no duplicate display names will occur. If you have a display name conflict, the display name generator may need updated.\n\n\n**To add an event see the readme in the [Github](https://github.com/ntindle/star-citizen-events-api).**"
         )]
         [HttpPost]
         [SwaggerResponse(StatusCodes.Status201Created, "The Event was created.", Type = typeof(EventDTO))]
