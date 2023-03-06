@@ -21,11 +21,11 @@ namespace SCEAPI.Repository
             return entity;
         }
 
-        public async Task<List<Event>> GetAllByDisplayNameAsync(string displayName, bool tracked = true, Func<IQueryable<Event>, IOrderedQueryable<Event>>? orderBy = null)
+        public async Task<List<Event>> SearchByDisplayNameAsync(string displayName, bool tracked = true, Func<IQueryable<Event>, IOrderedQueryable<Event>>? orderBy = null)
         {
 
             IQueryable<Event> query = dbSet;
-            query = query.Where(x => Event.GenerateDisplayName(x.Name, x.StartDateTime, x.EndDateTime).Equals(displayName));
+            query = query.Where(x => Event.GenerateDisplayName(x.Name, x.StartDateTime, x.EndDateTime).ToLower().Contains(displayName.ToLower()));
             if (orderBy != null)
                 query = orderBy(query);
             if (!tracked)

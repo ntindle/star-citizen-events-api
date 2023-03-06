@@ -66,20 +66,19 @@ namespace SCEAPI.Controllers
         }
 
         [SwaggerOperation(
-            Summary = "Gets an Event by display name.",
-            Description = "Gets a specific Event by its Display Name. Will return the first matching event found. \n\nNote: This may stop working as expected the API is updated as the display name calculator is expected to change as more events are added."
+            Summary = "Gets Events by display name.",
+            Description = "Gets matching Events by its Display Name.\n\nNote: This may stop working as expected the API is updated as the display name calculator is expected to change as more events are added."
         )]
         [HttpGet("{displayName}", Name = "GetEventByDisplayName")]
-        [SwaggerResponse(StatusCodes.Status200OK, "The found Event.", Type = typeof(EventDTO))]
-        [SwaggerResponse(StatusCodes.Status404NotFound, "The Event was not found.")]
-        public async Task<IActionResult> GetEventByDisplayName([SwaggerParameter("Display Name of the Event")] string displayName)
+        [SwaggerResponse(StatusCodes.Status200OK, "The found Events.", Type = typeof(EventDTO))]
+        public async Task<IActionResult> GetEventsByDisplayName([SwaggerParameter("Display Name of the Event")] string displayName)
         {
-            var obj = await _eventRepo.GetByDisplayNameAsync(displayName: displayName);
-            if (obj == null)
+            var objList = await _eventRepo.SearchByDisplayNameAsync(displayName: displayName);
+            var objDto = new List<EventDTO>();
+            foreach (var obj in objList)
             {
-                return NotFound();
+                objDto.Add(_mapper.Map<EventDTO>(obj));
             }
-            var objDto = _mapper.Map<EventDTO>(obj);
             return Ok(objDto);
         }
 
