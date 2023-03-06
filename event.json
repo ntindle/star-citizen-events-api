@@ -14,5 +14,29 @@
     "EndDateTime": "02/15/2023 00:00:00",
     "Name": "Coramor",
     "StartDateTime": "02/11/2023 00:00:00"
+  },
+  {
+    "Id": "3",
+    "AlternativeName": "",
+    "Description": "Every year in May, we gather to celebrate Invictus Launch Week. Though a time to honor those in the Navy and other armed forces for their tireless service, aerospace and defense manufacturers across the galaxy also take the opportunity to showcase their vehicles designed for (or influenced by) the military.\n\n\nSo, join us as we welcome the UEEN fleet back to the Stanton system and the beautiful planet microTech. Throughout the event, you can test-fly military-inspired vehicles, discover new releases, and tour an in-service Javelin destroyer, the UEES War Hammer. And don\u0027t miss the biggest and best UEEN fleet yet as it tours the system throughout the event.",
+    "EndDateTime": "06/01/2021 00:00:00",
+    "Name": "Invictus Launch Week",
+    "StartDateTime": "05/21/2021 00:00:00"
+  },
+  {
+    "Id": "4",
+    "AlternativeName": "",
+    "Description": "Welcome to Invictus Launch Week 2952, the annual celebration that pays homage to the UEE Navy and stands as one of its greatest displays of military might in civilian space. Each day, different vehicle manufacturers take over the halls of Orison\u2019s Vision Center, and nearly everything on display is available to fly or drive for free.",
+    "EndDateTime": "05/31/2022 00:00:00",
+    "Name": "Invictus Launch Week",
+    "StartDateTime": "05/20/2022 00:00:00"
+  },
+  {
+    "Id": "5",
+    "AlternativeName": "",
+    "Description": "Invictus marks the beginning of the new year for UEE Navy recruits and commemorates the graduation of the latest class of starmen and officers. The event\u0027s origins date back to 2541 and the First Tevarin War, when the UPE would send transport ships to each planet to pick up recruits for basic training. The locals would gather to celebrate those leaving to defend Humanity and marvel at the impressive military ships.\n\nToday, Invictus Launch Week is celebrated in UEE systems with high-flying public demonstrations from the naval fleet. As an added attraction, the galaxy\u0027s top vehicle and defense manufacturers utilize the festivities to showcase the ships and armament they supply to the military.",
+    "EndDateTime": "06/02/2020 00:00:00",
+    "Name": "Invictus Launch Week",
+    "StartDateTime": "05/22/2020 00:00:00"
   }
 ]
