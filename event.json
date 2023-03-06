@@ -38,5 +38,37 @@
     "EndDateTime": "06/02/2020 00:00:00",
     "Name": "Invictus Launch Week",
     "StartDateTime": "05/22/2020 00:00:00"
+  },
+  {
+    "Id": "6",
+    "AlternativeName": "",
+    "Description": "The Intergalactic Aerospace Exposition, or IAE, is the universe\u2019s premier space ship show and convention.\n\n\nChanging locations annually, the Expo has made its home in the Stanton system for the last two years, landing in Lorville on Hurston for the 2948 event, and touching down in ArcCorp\u2019s Area18 in 2949. It gives all players the opportunity to see some of the verse\u2019s biggest, best, and most iconic ships up close, as different manufacturers take over the hall each day, and everything on display is available to test-fly for free.",
+    "EndDateTime": "12/05/2019 00:00:00",
+    "Name": "Intergalactic Aerospace Expo",
+    "StartDateTime": "11/24/2019 00:00:00"
+  },
+  {
+    "Id": "7",
+    "AlternativeName": "",
+    "Description": "The galaxy\u2019s premier aerospace event, the Intergalactic Aerospace Expo, is coming to the chilly expanses of microTech. But while the weather outside may be cold, the convention hall will be chock-full of the hottest new ships, limited-edition paint jobs, and arms and armor the galaxy has to offer.\n\nStrap in for 13 days of aerospace exhilaration as pilots from around the \u0027verse come to see the newest and most iconic ships up close. Each day, different manufacturers take over the halls, so there\u0027s something new to see every day. And nearly everything on display is available to test-fly for free!\n\nIAE 2950 is a free event open to all citizens of the \u2018verse. Fly safe and we\u0027ll see you on microTech!",
+    "EndDateTime": "12/02/2020 00:00:00",
+    "Name": "Intergalactic Aerospace Expo",
+    "StartDateTime": "11/20/2020 00:00:00"
+  },
+  {
+    "Id": "8",
+    "AlternativeName": "",
+    "Description": "JAX IS BACK\nWhitley\u0027s Guide Returns\nIt wouldn\u0027t be the IAE without the antics of Jax McCleary and the Whitley\u0027s Guide crew. Tune in on November 19, 21, 23, and 27 for looks at the latest and greatest vehicles from the most trusted names in all things aerospace.",
+    "EndDateTime": "12/01/2021 00:00:00",
+    "Name": "Intergalactic Aerospace Expo",
+    "StartDateTime": "11/19/2021 00:00:00"
+  },
+  {
+    "Id": "9",
+    "AlternativeName": "",
+    "Description": "Strap in for 13 days of excitement as pilots from around the \u0027verse travel to see the newest and most iconic vehicles up close. Each day, different manufacturers take over the halls, and nearly everything on display is available to fly or drive for free!",
+    "EndDateTime": "11/30/2022 00:00:00",
+    "Name": "Intergalactic Aerospace Expo",
+    "StartDateTime": "11/18/2022 00:00:00"
   }
 ]
