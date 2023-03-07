@@ -19,8 +19,13 @@ namespace SCEAPI.Models.DTOs
         [SwaggerSchema("The Event's Description")]
         [Required]
         public string? Description { get; set; }
-        [Required]
 
+        [SwaggerSchema("Describe any known incorrect information about the event")]
+        [Required]
+        public string? KnownIncorrect { get; set; }
+
+
+        [Required]
         [SwaggerSchema("The IRL Start Date Time of the Event")]
         public DateTime StartDateTime
         {
@@ -61,6 +66,7 @@ namespace SCEAPI.Models.DTOs
                 return Event.GenerateDisplayName(Name, StartDateTime, EndDateTime);
             }
         }
+
 
     }
 }

@@ -4,6 +4,7 @@
     "AlternativeName": "Lunar New Year",
     "Description": "Launch into the Lunar New Year with a bold new adventure from January 20 through February 6.\n\nTo ring in a prosperous Year of the Rabbit here on Earth in 2023, and Year of the Rooster in 2953 Stanton, we\u0027re inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, red envelopes have been hidden across Stanton, and we\u0027re offering a variety of red and gold ship paints to tempt good fortune in the year ahead.",
     "EndDateTime": "02/06/2023 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Red Festival",
     "StartDateTime": "01/20/2023 00:00:00"
   },
@@ -12,6 +13,7 @@
     "AlternativeName": "Valentine\u2019s Day",
     "Description": "Just like Valentine\u2019s Day, during Coramor, citizens show loved ones they care by giving gifts, sending cards, and remembering the story of long-lost lovers separated by trillions of miles following a collapsed deep-space jump point\u2026 so maybe not just like our Valentine\u2019s Day.",
     "EndDateTime": "02/15/2023 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Coramor",
     "StartDateTime": "02/11/2023 00:00:00"
   },
@@ -20,6 +22,7 @@
     "AlternativeName": "",
     "Description": "Every year in May, we gather to celebrate Invictus Launch Week. Though a time to honor those in the Navy and other armed forces for their tireless service, aerospace and defense manufacturers across the galaxy also take the opportunity to showcase their vehicles designed for (or influenced by) the military.\n\n\nSo, join us as we welcome the UEEN fleet back to the Stanton system and the beautiful planet microTech. Throughout the event, you can test-fly military-inspired vehicles, discover new releases, and tour an in-service Javelin destroyer, the UEES War Hammer. And don\u0027t miss the biggest and best UEEN fleet yet as it tours the system throughout the event.",
     "EndDateTime": "06/01/2021 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Invictus Launch Week",
     "StartDateTime": "05/21/2021 00:00:00"
   },
@@ -28,6 +31,7 @@
     "AlternativeName": "",
     "Description": "Welcome to Invictus Launch Week 2952, the annual celebration that pays homage to the UEE Navy and stands as one of its greatest displays of military might in civilian space. Each day, different vehicle manufacturers take over the halls of Orison\u2019s Vision Center, and nearly everything on display is available to fly or drive for free.",
     "EndDateTime": "05/31/2022 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Invictus Launch Week",
     "StartDateTime": "05/20/2022 00:00:00"
   },
@@ -36,6 +40,7 @@
     "AlternativeName": "",
     "Description": "Invictus marks the beginning of the new year for UEE Navy recruits and commemorates the graduation of the latest class of starmen and officers. The event\u0027s origins date back to 2541 and the First Tevarin War, when the UPE would send transport ships to each planet to pick up recruits for basic training. The locals would gather to celebrate those leaving to defend Humanity and marvel at the impressive military ships.\n\nToday, Invictus Launch Week is celebrated in UEE systems with high-flying public demonstrations from the naval fleet. As an added attraction, the galaxy\u0027s top vehicle and defense manufacturers utilize the festivities to showcase the ships and armament they supply to the military.",
     "EndDateTime": "06/02/2020 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Invictus Launch Week",
     "StartDateTime": "05/22/2020 00:00:00"
   },
@@ -44,6 +49,7 @@
     "AlternativeName": "",
     "Description": "The Intergalactic Aerospace Exposition, or IAE, is the universe\u2019s premier space ship show and convention.\n\n\nChanging locations annually, the Expo has made its home in the Stanton system for the last two years, landing in Lorville on Hurston for the 2948 event, and touching down in ArcCorp\u2019s Area18 in 2949. It gives all players the opportunity to see some of the verse\u2019s biggest, best, and most iconic ships up close, as different manufacturers take over the hall each day, and everything on display is available to test-fly for free.",
     "EndDateTime": "12/05/2019 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Intergalactic Aerospace Expo",
     "StartDateTime": "11/24/2019 00:00:00"
   },
@@ -52,6 +58,7 @@
     "AlternativeName": "",
     "Description": "The galaxy\u2019s premier aerospace event, the Intergalactic Aerospace Expo, is coming to the chilly expanses of microTech. But while the weather outside may be cold, the convention hall will be chock-full of the hottest new ships, limited-edition paint jobs, and arms and armor the galaxy has to offer.\n\nStrap in for 13 days of aerospace exhilaration as pilots from around the \u0027verse come to see the newest and most iconic ships up close. Each day, different manufacturers take over the halls, so there\u0027s something new to see every day. And nearly everything on display is available to test-fly for free!\n\nIAE 2950 is a free event open to all citizens of the \u2018verse. Fly safe and we\u0027ll see you on microTech!",
     "EndDateTime": "12/02/2020 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Intergalactic Aerospace Expo",
     "StartDateTime": "11/20/2020 00:00:00"
   },
@@ -60,6 +67,7 @@
     "AlternativeName": "",
     "Description": "JAX IS BACK\nWhitley\u0027s Guide Returns\nIt wouldn\u0027t be the IAE without the antics of Jax McCleary and the Whitley\u0027s Guide crew. Tune in on November 19, 21, 23, and 27 for looks at the latest and greatest vehicles from the most trusted names in all things aerospace.",
     "EndDateTime": "12/01/2021 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Intergalactic Aerospace Expo",
     "StartDateTime": "11/19/2021 00:00:00"
   },
@@ -68,7 +76,35 @@
     "AlternativeName": "",
     "Description": "Strap in for 13 days of excitement as pilots from around the \u0027verse travel to see the newest and most iconic vehicles up close. Each day, different manufacturers take over the halls, and nearly everything on display is available to fly or drive for free!",
     "EndDateTime": "11/30/2022 00:00:00",
+    "KnownIncorrect": "",
     "Name": "Intergalactic Aerospace Expo",
     "StartDateTime": "11/18/2022 00:00:00"
+  },
+  {
+    "Id": "10",
+    "AlternativeName": "Lunar New Year",
+    "Description": "Embrace the Lunar New Year with a fresh adventure from January 31 through February 15.\n\nTo ring in a prosperous Year of the Tiger here on Earth in 2022, and Year of the Monkey in 2952 Stanton, we\u2019re inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, the Banu have hidden red envelopes across Stanton and are offering a variety of red and gold ship paints to tempt good fortune in the coming year.",
+    "EndDateTime": "02/15/2022 00:00:00",
+    "KnownIncorrect": "",
+    "Name": "Red Festival",
+    "StartDateTime": "01/31/2022 00:00:00"
+  },
+  {
+    "Id": "11",
+    "AlternativeName": "Lunar New Year",
+    "Description": "Gather your friends and family and kick off 2021 with the Year of the Ox, and celebrate the Year of the Ram in-game at the Red Festival 2951!\n\nLet\u2019s venture into the New Year together, say goodbye to 2020, and unfold a new chapter with the Red Festival running from February 11 to February 26. To celebrate, we\u2019re hiding red envelopes across the landing zones of Stanton and offering a variety of ships, including exclusive 2951 Red Festival paints for citizen-favorites Nomad and Freelancer!",
+    "EndDateTime": "02/26/2021 00:00:00",
+    "KnownIncorrect": "",
+    "Name": "Red Festival",
+    "StartDateTime": "02/11/2021 00:00:00"
+  },
+  {
+    "Id": "12",
+    "AlternativeName": "Lunar New Year",
+    "Description": "A celebration of renewal and remembrance, the Red Festival has its origins in old Earth customs celebrating the end of a \u2018lunisolar year\u2019, an ancient calendar system based off Luna\u2019s (Sol 3a) cycles. Celebrants honor the festival with a variety of traditions that differ greatly depending on the system and community who are participating.\n\n\nCommon activities include wearing red items (a color that symbolizes good fortune), honoring friends and relatives who have passed by thinking of them and sharing stories of their influence, and eating foods long in length such as calossk tentacles or noodles dyed red. One of the most popular ways to celebrate is with the exchange of gilded red envelopes. On some worlds the envelopes contain a small token which the receiver is supposed to keep with them for good fortune. Other worlds may include a small amount of credits inside to help those you care about have a strong start in the upcoming cycle.\n\n\nGrowing in popularity is the newer tradition of hiding the envelopes as a way of spreading good fortune and prosperity to those that fate has deemed in need. Banu, in particular, have taken up this last tradition, hiding the Red Festival envelopes in honor of Cassa, their Patron of Luck.",
+    "EndDateTime": "02/26/2020 00:00:00",
+    "KnownIncorrect": "Unconfirmed EndDateTime",
+    "Name": "Red Festival",
+    "StartDateTime": "01/24/2020 00:00:00"
   }
 ]
