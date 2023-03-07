@@ -8,6 +8,14 @@
     "StartDateTime": "01/20/2023 00:00:00"
   },
   {
+    "Id": "11",
+    "AlternativeName": "Lunar New Year 2021",
+    "Description": "Gather your friends and family and kick off 2021 with the Year of the Ox, and celebrate the Year of the Ram in-game at the Red Festival 2951! Let’s venture into the New Year together, say goodbye to 2020, and unfold a new chapter with the Red Festival running from February 11 to February 26. To celebrate, we’re hiding red envelopes across the landing zones of Stanton and offering a variety of ships, including exclusive 2951 Red Festival paints for citizen-favorites Nomad and Freelancer! Read on for details and we wish you a prosperous 2021. 新年快樂 새해 복 많이 받으세요 Chúc Mừng Năm Mới",
+    "EndDateTime": "02/26/2021 00:00:00",
+    "Name": "Red Festival 2951",
+    "StartDateTime": "02/11/2021 00:00:00"
+  },
+  {
     "Id": "2",
     "AlternativeName": "Valentine\u2019s Day",
     "Description": "Just like Valentine\u2019s Day, during Coramor, citizens show loved ones they care by giving gifts, sending cards, and remembering the story of long-lost lovers separated by trillions of miles following a collapsed deep-space jump point\u2026 so maybe not just like our Valentine\u2019s Day.",
