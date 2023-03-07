@@ -12,6 +12,7 @@ namespace SCEAPI.Models
         public string? AlternativeName { get; set; }
         public string? Description { get; set; }
 
+        public string? KnownIncorrect { get; set; } = "";
 
         public DateTime StartDateTime
         {
