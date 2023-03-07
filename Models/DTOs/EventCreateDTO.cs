@@ -18,7 +18,6 @@ namespace SCEAPI.Models.DTOs
         public string? Description { get; set; } = "";
 
         [SwaggerSchema("Describe any known incorrect information about the event")]
-        [Required]
         public string? KnownIncorrect { get; set; }
 
         [SwaggerSchema("The IRL Start Date Time of the Event")]
