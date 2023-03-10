@@ -106,5 +106,32 @@
     "KnownIncorrect": "Unconfirmed EndDateTime",
     "Name": "Red Festival",
     "StartDateTime": "01/24/2020 00:00:00"
+  },
+  {
+    "Id": "13",
+    "AlternativeName": "Christmas",
+    "Description": "Luminalia is an annual holiday celebrated by both the Banu and Humans on December 22. It originated as the irregularly-held Banu festival \u0027tsikti efanga\u0027 (Glow Festival), and is marked by the lighting of ceremonial lamps that stay lit until their fuel is consumed. While the lamps are burning, all Banu, no matter where they are, are considered one Souli (a group of cohabiting Banu who have formed an alliance centered around a specific, shared skillset). They invite friends, business associates, and passing strangers into their Soulis and give them gifts so they will always have something to sell.\n\nToday, Banu and Humans commemorate Luminalia with gift-exchanges, present hunts, glowing lights, food and drink, and gatherings of family, friends, business associates, and acquaintances.",
+    "EndDateTime": "12/22/2021 00:00:00",
+    "KnownIncorrect": "",
+    "Name": "Luminalia",
+    "StartDateTime": "12/11/2021 00:00:00"
+  },
+  {
+    "Id": "14",
+    "AlternativeName": "Christmas",
+    "Description": "Luminalia is an annual holiday celebrated by both the Banu and Humans on December 22. It began as the irregularly-held Banu festival \u0027tsikti efanga\u0027 (Glow Festival), which was marked by the lighting of ceremonial lamps that remained lit until their fuel was consumed. While the lamps were burning, all Banu, no matter their location, were considered one Souli (a group of cohabiting Banu who formed an alliance centered around a specific shared skillset).\n\nToday, Banu and Humans commemorate Luminalia with gift-exchanges, present hunts, glowing lights, food and drink, and gatherings of family, friends, business associates, and acquaintances.",
+    "EndDateTime": "12/22/2022 00:00:00",
+    "KnownIncorrect": "",
+    "Name": "Luminalia",
+    "StartDateTime": "12/11/2022 00:00:00"
+  },
+  {
+    "Id": "15",
+    "AlternativeName": "Christmas",
+    "Description": "Luminalia is an annual holiday celebrated by both the Banu and Humanity on December 22.\n\nIt originated as the irregularly-held Banu festival \u0027tsikti efanga\u0027 (Glow Festival), and is marked by the lighting of ceremonial lamps that stay lit until their fuel is consumed (about 34,000 beats / 2 Standard Earth Days).\n\nWhile the lamps are burning, all Banu, no matter where they are, are considered one Souli (a group of cohabiting Banu who have formed an alliance centered around a specific, shared skillset).\n\nThey invite friends, business associates, and passing strangers into their Soulis and give them gifts so they will always have something to sell.\n\nHumans first participated in the festival when a Banu ship-repair Souli on Cestulus (Davien II) lit their lamps and invited the nearby Humans to celebrate with them in 2438. The United Empire of Earth (UEE) officially recognized Luminalia as a holiday in 2557 after it became a widely practiced seasonal tradition.\n\nToday, Banu and Humans commemorate Luminalia with gift-exchanges, present hunts, glowing lights, food and drink, and gatherings of family, friends, business associates, and acquaintances. Homes and businesses are typically decorated in green and red.",
+    "EndDateTime": "12/21/2020 00:00:00",
+    "KnownIncorrect": "",
+    "Name": "Luminalia",
+    "StartDateTime": "12/17/2020 00:00:00"
   }
 ]
