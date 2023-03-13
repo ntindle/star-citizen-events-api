@@ -11,6 +11,7 @@ The API is available at [](). It is a simple GET request that returns a JSON obj
             "name": "Red Festival",
             "alternativeName": "Lunar New Year",
             "description": "Launch into the Lunar New Year with a bold new adventure from January 20 through February 6.\n\nTo ring in a prosperous Year of the Rabbit here on Earth in 2023, and Year of the Rooster in 2953 Stanton, we're inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, red envelopes have been hidden across Stanton, and we're offering a variety of red and gold ship paints to tempt good fortune in the year ahead.",
+            "knownIncorrect": null,
             "startDateTime": "2023-01-20T00:00:00",
             "endDateTime": "2023-02-06T00:00:00",
             "ingameStartDateTime": "2953-01-20T00:00:00",
@@ -23,7 +24,7 @@ The API is available at [](). It is a simple GET request that returns a JSON obj
     ]
 ```
 
-You can also get a single event by using the `id` parameter. For example, to get the event with the `id` of `1`, you would use the following URL: [](). This will return the following JSON object:
+You can also get a single event by using the `id` parameter. For example, to get the event with the `id` of `1`, you would use the following endpoint: [/api/v1/ingame/events/1](https://starcitizen.events/api/v1/ingame/events/1). This will return the following JSON object:
 
 ```json
     {
@@ -31,6 +32,7 @@ You can also get a single event by using the `id` parameter. For example, to get
         "name": "Red Festival",
         "alternativeName": "Lunar New Year",
         "description": "Launch into the Lunar New Year with a bold new adventure from January 20 through February 6.\n\nTo ring in a prosperous Year of the Rabbit here on Earth in 2023, and Year of the Rooster in 2953 Stanton, we're inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, red envelopes have been hidden across Stanton, and we're offering a variety of red and gold ship paints to tempt good fortune in the year ahead.",
+        "knownIncorrect": null,
         "startDateTime": "2023-01-20T00:00:00",
         "endDateTime": "2023-02-06T00:00:00",
         "ingameStartDateTime": "2953-01-20T00:00:00",
@@ -42,6 +44,7 @@ You can also get a single event by using the `id` parameter. For example, to get
 Notes: 
 - The `id` is the unique identifier for the event. It should not be used for sorting events by time.
 - The `displayName` is the name of the event with the year appended to it. This is useful for displaying the event in a list. The formula for calculating it may change as events are added.
+- The field `knownIncorrect` will list any known issues with the data. If this field is populated on any returns to you, treat the response with care.
 - The `ingameStartDateTime` and `ingameEndDateTime` are the start and end dates of the event in the Star Citizen universe. This is useful for displaying the event in a list. The formula for calculating it may change as lore progresses. Currently, it just adds `930 years` to the `startDateTime` and `endDateTime` values.
 
 ## Contributing
@@ -58,6 +61,7 @@ If you would like to add an event, please add it to the `events.json` file, then
     "Id": "1",
     "AlternativeName": "Lunar New Year",
     "Description": "Launch into the Lunar New Year with a bold new adventure from January 20 through February 6.\n\nTo ring in a prosperous Year of the Rabbit here on Earth in 2023, and Year of the Rooster in 2953 Stanton, we\u0027re inviting you to celebrate the Red Festival with us. As is tradition throughout the UEE, red envelopes have been hidden across Stanton, and we\u0027re offering a variety of red and gold ship paints to tempt good fortune in the year ahead.",
+    "KnownIncorrect": null,
     "Name": "Red Festival",
     "StartDateTime": "01/20/2023 00:00:00",
     "EndDateTime": "02/06/2023 00:00:00"
@@ -78,7 +82,7 @@ You can also run the API locally and add an event via the `/api/v1/ingame/events
 ```
 
 ### Updating an event via json file
-> **Please only update one event per PR.** 
+> **Please only update one event/category per PR.** 
 
 If you would like to update an event, please update it in the `events.json` file, then make a pull request. 
 
