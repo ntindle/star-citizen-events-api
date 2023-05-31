@@ -187,5 +187,14 @@
     "KnownIncorrect": "",
     "Name": "Stella Fortuna",
     "StartDateTime": "03/17/2023 00:00:00"
+  },
+  {
+    "Id": "22",
+    "AlternativeName": "Fleet Week",
+    "Description": "Invictus marks the beginning of the new year for UEE Navy recruits and commemorates the graduation of the latest class of starmen and officers. The event's origins date back to 2541 and the First Tevarin War, when the UPE would send transport ships to each planet to pick up recruits for basic training. The locals would gather to celebrate those leaving to defend Humanity and marvel at the impressive military ships.\n\nToday, Invictus Launch Week is celebrated in UEE systems with high-flying public demonstrations from the naval fleet. As an added attraction, the galaxy's top vehicle and defense manufacturers utilize the festivities to showcase the ships and armament they supply to the military.",
+    "EndDateTime": "05/31/2023 15:00:00",
+    "KnownIncorrect": "",
+    "Name": "Invictus Launch Week",
+    "StartDateTime": "05/19/2023 11:00:00"
   }
 ]
